@@ -30,7 +30,7 @@
 	overflow: hidden;
 }
 
-input[type="submit"]{
+input[type="submit"] input[type="button"]{
 	width:5em;
 }
 
