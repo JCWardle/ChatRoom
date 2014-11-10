@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Service.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,12 +13,7 @@ namespace Service
     {
         protected void Application_Start(object sender, EventArgs e)
         {
-            var routes = GlobalConfiguration.Configuration.Routes;
-            routes.MapHttpRoute(
-                name: "API Default",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-            );
+            WebApiConfig.Register(GlobalConfiguration.Configuration);
         }
     }
 }
