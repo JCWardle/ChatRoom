@@ -1,6 +1,29 @@
+<!doctype html>
+<html ng-app="chatRoom">
 <head>
 	<title>Chat room!</title>
 	<script type="text/javascript" src="scripts/angular.min.js"></script>
+	<script type="text/javascript" src="scripts/chatRoom.js"></script>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
 <body>
+	<div ng-controller="chatRoomController">
+		<ul class="chat">
+			<li ng-repeat="message in messages">
+				<p>{{message.time | date: "H:mm:ss"}}: {{message.text}}</p>
+			</li>
+		</ul>
+		<div class="input">
+			<form ng-submit="sendMessage()" class="add-message">
+				<span class="buttons">
+					<input type="submit" value="Send"/>
+					<input ng-click="clear()" type="button" value="Clear"/>									
+				</span>
+				<span class="message-input">
+					<input type="text" ng-model="messageText"/>
+				</span>
+			</form>
+		</div>
+	</div>
 </body>
+</html>

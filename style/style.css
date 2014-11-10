@@ -1,0 +1,39 @@
+.chat {
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	height: 90%;
+	padding-left: 1px;
+}
+
+.chat li {
+	list-style: none;
+	line-height: 1px;
+}
+
+.input {
+	overflow: hidden;
+}
+
+.message-input {
+	display: block;
+	overflow: hidden;
+	padding-right: 10px;
+}
+
+.message-input input {
+	width: 100%;
+}
+
+.add-message {
+	width: 100%;
+	overflow: hidden;
+}
+
+input[type="submit"]{
+	width:5em;
+}
+
+.buttons {
+	float: right;
+}
